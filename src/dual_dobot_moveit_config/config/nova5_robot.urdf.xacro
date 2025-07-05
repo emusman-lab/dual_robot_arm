@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="nova5_robot">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import nova5_robot urdf file -->
+    <xacro:include filename="$(find dobot_description)/urdf/nova5_robot_latest.urdf.xacro" />
+
+    <!-- Root link -->
+    <link name="world"/>
+
+    <!-- Left arm -->
+    <xacro:nova5_robot
+        name="nova5_robot"
+        prefix="left_">
+        <origin xyz="0 -0.64 0" rpy="0 0 1.57" />
+    </xacro:nova5_robot>
+
+    <!-- Right arm -->
+    <xacro:nova5_robot
+        name="nova5_robot"
+        prefix="right_">
+        <origin xyz="0 0.0 0" rpy="0 0 1.57" />
+    </xacro:nova5_robot>
+
+    <!-- Import control_xacro for Left-->
+    <xacro:include filename="nova5_robot.ros2_control.xacro" />
+
+    <!-- LEFT Control -->
+    <xacro:nova5_robot_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)" prefix="left_"/>
+    
+    <!-- RIGHT Control -->
+    <xacro:nova5_robot_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)" prefix="right_"/>
+
+</robot>
