@@ -8,9 +8,9 @@ except:
     from omni.isaac.kit import SimulationApp
 
 DOBOT_STAGE_PATH_1    = "/World/left_nova5_robot"
-DOBOT_USD_PATH_1      = "/home/usman/projects_ws/github/robot_ws/isaac/usd/nova5_robot_left_for_isaac/nova5_robot_left_for_isaac.usd"
+DOBOT_USD_PATH_1      = "/home/usman/projects_ws/dual_robot_arm/isaac/usd/nova5_robot_left_for_isaac/nova5_robot_left_for_isaac.usd"
 DOBOT_STAGE_PATH_2    = "/World/right_nova5_robot"
-DOBOT_USD_PATH_2      = "/home/usman/projects_ws/github/robot_ws/isaac/usd/nova5_robot_right_for_isaac/nova5_robot_right_for_isaac.usd"
+DOBOT_USD_PATH_2      = "/home/usman/projects_ws/dual_robot_arm/isaac/usd/nova5_robot_right_for_isaac/nova5_robot_right_for_isaac.usd"
 BACKGROUND_STAGE_PATH = "/background"
 BACKGROUND_USD_PATH   = "/Isaac/Environments/Simple_Room/simple_room.usd"
 GRAPH_PATH_1          = "/ActionGraph_left"

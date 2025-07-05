@@ -78,8 +78,8 @@ Make sure Isaac Sim can run with `python.sh` and ROS 2 environment is sourced in
 Clone this repository into your desired workspace:
 
 ```bash
-git clone <your_repo_url>  # Replace with actual URL
-cd robot_ws
+git clone https://github.com/emusman-lab/dual_robot_arm.git
+cd dual_robot_arm
 ```
 
 ---
@@ -98,7 +98,7 @@ Then source it:
 source install/setup.bash
 ```
 
-> ✅ Replace the source path as needed, e.g., `/home/username/robot_ws/install/setup.bash`
+> ✅ Replace the source path as needed, e.g., `/home/username/dual_robot_arm/install/setup.bash`
 
 ---
 
@@ -110,7 +110,7 @@ Launch Isaac Sim with the dual-arm control script:
 
 ```bash
 ~/.local/share/ov/pkg/isaac-sim-4.2.0/python.sh \
-  /home/usman/projects_ws/github/robot_ws/isaac/scripts/isaac_moveit_dobot_dual.py
+  /home/usman/projects_ws/dual_robot_arm/isaac/scripts/isaac_moveit_dobot_dual.py
 ```
 
 Make sure your Isaac Sim environment and ROS2 bridge are fully initialized.
